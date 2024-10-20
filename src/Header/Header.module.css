@@ -4,6 +4,7 @@ header {
     top: 0; /* Start at the top */
     min-width: 100vw; /* Header takes up the whole view width */
 
+    padding-top: 1rem;
     margin: 0;
 
     /* Align items in the header to the center horizontally and vertically */
@@ -29,7 +30,7 @@ header nav ol li a {
 
     color: #232049;
     font-size: 15px; /* Increases font size */
-    font-weight: 600;
+    font-weight: 700;
 
     margin: 0;
 
