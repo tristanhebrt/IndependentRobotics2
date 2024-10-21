@@ -12,7 +12,9 @@ function Header(){
         <header className={styles.header}>
             <nav>
                 <ol>
-                    <li><a href={aboutLink}><img src={logoSrc}/></a></li>
+                    <li><a href={aboutLink}><img src={logoSrc} alt="logo"/></a></li>
+                </ol>
+                <ol>
                     <li><a href={homeLink}>Home</a></li>
                     <li><a href={technologyLink}>Technology</a></li>
                     <li><a href={aboutLink}>About Us</a></li>
