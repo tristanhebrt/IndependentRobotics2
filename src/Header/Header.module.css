@@ -1,5 +1,5 @@
 header {
-    position: fixed; /* Make the header fixed */
+    position: relative; /* Make the header relative */
     z-index: 11; /* Header overlaps other items */
     top: 0; /* Start at the top */
     min-width: 100vw; /* Header takes up the whole view width */
