@@ -32,7 +32,8 @@ header nav ol {
     
     display: flex; /* Flex items */
     align-items: center; /* Center items vertically */
-    gap: 5rem; /* Gap between items */
+    flex-wrap: wrap;
+    gap: 0 5rem; /* Gap between items */
 }
 
 header nav ol:last-child {
