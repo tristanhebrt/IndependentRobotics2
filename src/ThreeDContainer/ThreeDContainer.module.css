@@ -14,7 +14,7 @@
     width: 600px;
     height: 900px;
     border: solid 8px var(--white-text);
-    border-radius: 5px;
+    border-radius: 2px;
     backdrop-filter: blur(10px);
 
     margin: 5rem;
