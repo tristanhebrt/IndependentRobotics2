@@ -5,7 +5,8 @@ import Header from '../components/Header/Header.jsx'
 import HomeTitle from '../Home/HomeTitle/HomeTitle.jsx'
 import InfoCard from '../components/InfoCard/InfoCard.jsx'
 import HomeText1 from '../Home/HomeText1/HomeText1.jsx'
-import ThreeDContainer from '../components/ThreeDContainer/ThreeDContainer.jsx'
+
+import ModelView from '../components/ModelView/ModelView.jsx'
 
 function Home() {
 
@@ -33,7 +34,9 @@ function Home() {
           button="Learn more"
           buttonLink="technology.html"
         />
-        <ThreeDContainer fileLink="../assets/independenceRoboticsRobot.glb"/>
+        <div className={styles.robotContainer}>
+          <ModelView modelUrl='./models/independenceRoboticsRobot.glb'/>
+        </div>
       </div>
     </>
   )

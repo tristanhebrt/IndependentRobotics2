@@ -24,3 +24,18 @@
     justify-content: center;
     align-items: center;
 }
+
+/* 3D Robot container */
+.robotContainer {
+    position: relative; /* Maintain the layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25vw;
+    height: 80vh;
+    margin: 2rem;
+
+    backdrop-filter: blur(2rem);
+    border: 10px solid var(--white-background);
+}
