@@ -5,6 +5,7 @@
     box-sizing: border-box; /* Ensures padding and borders are included in width/height */
 }
 
+/* Top of page title styles **************************************************/
 .title{
     display: flex;
     justify-content: center;
@@ -12,6 +13,7 @@
     flex-direction: column;
 
     margin: 0;
+    margin-bottom: 20vh; /*put some distance bwtween title and info cards*/
 
     min-height: 70vh;
 }
@@ -38,7 +40,7 @@
     max-width: 1vw; /*always stack title text*/
 }
 
-.title h2{
+.title p{
     /*text styles*/
     font-size: 1.5rem;
     font-weight: 700;
@@ -49,7 +51,7 @@
     letter-spacing: 4px;
 
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 3vh;
 
     /*stack text*/
     display: flex;
@@ -59,4 +61,65 @@
     flex-direction: column;
     
     max-width: 25vw;
+}
+
+/* Info cards container 1 */
+.infoCardContainer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+/*  Text container 1 */ 
+.textContainer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 10vh 5vw;
+    max-width: 40vw;
+}
+
+.textContainer1 h1 {
+    color: var(--white-text);
+
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+}
+
+.textContainer1 p {
+    color: var(--white-text);
+
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+}
+
+.textContainer1 button {
+    color: var(--darkblue-text);
+    background-color:var(--white-background);
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    align-self: flex-start;
+    
+    padding: 10px 20px;
+    margin: 20px 0;
+    transition: transform 0.5s ease; /* Add transition for smooth scaling */
+    box-shadow: 0px 0px 10px black; 
+}
+
+.textContainer1 button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }

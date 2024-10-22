@@ -1,0 +1,63 @@
+/* General Reset for Margin and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0;
+    margin-bottom: 20vh; /*put some distance bwtween title and info cards*/
+
+    min-height: 70vh;
+}
+
+.title h1{
+    /*text styles*/
+    font-size: 4rem;
+    font-weight: 700;
+
+    color: var(--white-text);
+    text-shadow: 2px 2px 5px var;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    margin: 0;
+
+    /*stack text*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    
+    max-width: 1vw; /*always stack title text*/
+}
+
+.title p{
+    /*text styles*/
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    color: var(--white-text);
+    text-shadow: 2px 2px 5px var(--black-shadow);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    margin: 0;
+    margin-top: 3vh;
+
+    /*stack text*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    
+    max-width: 25vw;
+}

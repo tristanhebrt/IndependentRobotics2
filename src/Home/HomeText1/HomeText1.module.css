@@ -1,0 +1,50 @@
+/*  Text container 1 */ 
+.textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 10vh 5vw;
+    max-width: 40vw;
+}
+
+.textContainer h1 {
+    color: var(--white-text);
+
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+}
+
+.textContainer p {
+    color: var(--white-text);
+
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+}
+
+.textContainer button {
+    color: var(--darkblue-text);
+    background-color:var(--white-background);
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    align-self: flex-start;
+    
+    padding: 10px 20px;
+    margin: 20px 0;
+    transition: transform 0.5s ease; /* Add transition for smooth scaling */
+    box-shadow: 0px 0px 10px black; 
+}
+
+.textContainer button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
