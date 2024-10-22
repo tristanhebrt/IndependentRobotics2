@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import styles from './Home.module.css'
 
-import Header from "../Header/Header.jsx"
-import HomeTitle from "../Home/HomeTitle/HomeTitle.jsx"
-import InfoCard from "../InfoCard/InfoCard.jsx"
-import HomeText1 from "../Home/HomeText1/HomeText1.jsx"
-import ThreeDContainer from "../ThreeDContainer/ThreeDContainer.jsx"
+import Header from '../components/Header/Header.jsx'
+import HomeTitle from '../Home/HomeTitle/HomeTitle.jsx'
+import InfoCard from '../components/InfoCard/InfoCard.jsx'
+import HomeText1 from '../Home/HomeText1/HomeText1.jsx'
+import ThreeDContainer from '../components/ThreeDContainer/ThreeDContainer.jsx'
 
 function Home() {
 
