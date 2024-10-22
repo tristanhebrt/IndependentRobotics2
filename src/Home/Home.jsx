@@ -30,6 +30,7 @@ function Home() {
         title="How Independence Robotics is making a difference"
         text="Independence Robotics empowers individuals with limited mobility by enabling them to complete simple tasks, such as retrieving objects and navigating their home. Through intuitive app controls, our assistive robot provides the freedom to take control of daily life, promoting greater independence and self-reliance."
         button="Learn more"
+        buttonLink="technology.html"
       />
     </>
   )
