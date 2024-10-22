@@ -5,4 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.glb'],
+  build: {
+    sourcemap: true, // Ensure source maps are generated
+  },
+  server: {
+    sourcemap: true, // Optional: Useful for dev server
+  },
 })

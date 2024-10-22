@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import styles from "./ThreeDContainer.module.css";
+
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import robotModel from '../assets/independenceRoboticsRobot.glb'; // Correctly import the model
+import robotModel from '/models/independenceRoboticsRobot.glb'; // Correctly import the model
 
 function ThreeDContainer() {
     const mountRef = useRef(null);
