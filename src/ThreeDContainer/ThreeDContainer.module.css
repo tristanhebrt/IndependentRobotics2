@@ -5,19 +5,17 @@
     box-sizing: border-box; /* Ensures padding and borders are included in width/height */
 }
 
-/* Info cards container 1 */
-.infoCardContainer1 {
+.threeDContainer {
+    position: relative; /* Maintain the layout */
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 2rem;
+    width: 600px;
+    height: 900px;
+    border: solid 8px var(--white-text);
+    border-radius: 5px;
     backdrop-filter: blur(10px);
-}
 
-/* Row container */
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 5rem;
 }
