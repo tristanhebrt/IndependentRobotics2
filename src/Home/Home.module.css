@@ -6,7 +6,7 @@
 }
 
 /* Info cards container 1 */
-.infoCardContainer1 {
+.prosCardsContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,29 +15,36 @@
     padding: 2rem;
     border-top: solid 10px var(--white-text);
     border-bottom: solid 10px var(--white-text);
-    border-radius: 5px;
     backdrop-filter: blur(10px);
 }
 
-/* Technology Cards container */
-.technologyCardsContainer {
+.homeText1Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* Technology containers */
+.technologyContainer { /*container above and robot container*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    padding: 2rem;
+    border-top: solid 10px var(--white-text);
+    border-bottom: solid 10px var(--white-text);
+    backdrop-filter: blur(10px);
+}
+
+.technologyCardsContainer { /*title and cards*/
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    padding: 2rem;
-    border-top: solid 10px var(--white-text);
-    border-bottom: solid 10px var(--white-text);
-    border-radius: 5px;
-    backdrop-filter: blur(10px);
-}
-
-/* Row container */
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 70%;
 }
 
 /* 3D Robot container */
@@ -47,9 +54,8 @@
     justify-content: center;
     align-items: center;
 
-    width: 25vw;
+    width: 30vw;
     height: 80vh;
-    margin: 2rem;
 
     backdrop-filter: blur(2rem);
     border: 10px solid var(--white-background);
@@ -70,10 +76,11 @@
     align-items: center;
 
     width: 100vw;
-    height: 10vh;
+    padding: 5rem;
 
     color: var(--white-text);
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 5px var(--black-shadow);
 }

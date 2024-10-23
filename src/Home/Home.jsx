@@ -33,24 +33,27 @@ function Home() {
       <HomeTitle
         title="Independence Robotics" 
         text="Empowering independence with assistive robotics"/>
-      <div className={styles.infoCardContainer1}>
+      <div className={styles.prosCardsContainer}>
         <InfoCard cards={prosCards} flexDirection="row" justifyContent="center" scrollable={false}/>
       </div>
-      <div className={styles.row}>
+      <div className={styles.homeText1Container}>
         <HomeText1 
           title="How Independence Robotics is making a difference"
           text="We empower individuals with limited mobility by enabling them to complete simple tasks, such as retrieving objects and navigating their home. Through intuitive app controls, our assistive robot provides the freedom to take control of daily life, promoting greater independence and self-reliance."
           button="Learn more"
           buttonLink="technology.html"
         />
-        <div className={styles.robotContainer}>
-          <ModelView modelUrl='./models/independenceRoboticsRobot.glb'/>
-        </div>
       </div>
-      <div className={styles.technologyCardsContainer}>
-        <div id="technologyTitle" className={styles.sectionTitle}>Our Technology</div>
-        <InfoCard cards={technologyCards} flexDirection="row" justifyContent="left" scrollable={true}/>
+      <div className={styles.technologyContainer}>
+          <div className={styles.technologyCardsContainer}>
+            <div id="technologyTitle" className={styles.sectionTitle}>Our Technology</div>
+            <InfoCard cards={technologyCards} flexDirection="row" justifyContent="left" scrollable={true}/>
+          </div>
+          <div className={styles.robotContainer}>
+            <ModelView modelUrl='./models/independenceRoboticsRobot.glb'/>
+          </div>
       </div>
+        
     </>
   )
 }
