@@ -60,12 +60,6 @@
     backdrop-filter: blur(2rem);
     border: 10px solid var(--white-background);
     border-radius: 2px;
-
-    transition: border-color 0.5s ease-in-out;
-}
-
-.robotContainer:hover {
-    border-color: var(--darkblue-text);
 }
 
 /* Section title */
