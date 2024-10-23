@@ -2,8 +2,8 @@ import styles from './Header.module.css'
 
 function Header(){
     const logoSrc = './src/assets/IndependenceRoboticsLogo.jpg';
-    const homeLink = "index.html";
-    const technologyLink = "technology.html";
+    const homeLink = "#top";
+    const technologyLink = "#technologyTitle";
     const aboutLink = "about.html";
     const contactLink = "contact.html";
     const preorderLink = "preorder.html";

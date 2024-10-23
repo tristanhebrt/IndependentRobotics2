@@ -3,20 +3,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Ensures padding and borders are included in width/height */
+    scroll-behavior: smooth;
 }
 
 header {
-    position: relative; /* Make the header relative */
+    position: fixed; /* Make the header relative */
     z-index: 11; /* Header overlaps other items */
     top: 0; /* Start at the top */
     min-width: 100vw; /* Header takes up the whole view width */
     
-    padding: 4vh 10vw; /* General padding */
+    padding: 0.5vh 10vw; /* General padding */
     margin: 0;
 
     display: flex; /* Use flexbox */
     justify-content: space-between; /* Space between left and right content */
     align-items: center; /* Center items vertically */
+
+    background-image: url(./src/assets/PageBackground.jpg); /* Add the page background image */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Dont repeat the image */
+    background-size: cover; /* Dont crop the image */
+    background-attachment: fixed; /* Dont move the image */
 }
 
 header nav {

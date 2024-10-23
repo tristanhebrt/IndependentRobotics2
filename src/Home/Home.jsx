@@ -30,7 +30,7 @@ function Home() {
   return (
     <>
       <Header/>
-      <HomeTitle 
+      <HomeTitle
         title="Independence Robotics" 
         text="Empowering independence with assistive robotics"/>
       <div className={styles.infoCardContainer1}>
@@ -39,7 +39,7 @@ function Home() {
       <div className={styles.row}>
         <HomeText1 
           title="How Independence Robotics is making a difference"
-          text="Independence Robotics empowers individuals with limited mobility by enabling them to complete simple tasks, such as retrieving objects and navigating their home. Through intuitive app controls, our assistive robot provides the freedom to take control of daily life, promoting greater independence and self-reliance."
+          text="We empower individuals with limited mobility by enabling them to complete simple tasks, such as retrieving objects and navigating their home. Through intuitive app controls, our assistive robot provides the freedom to take control of daily life, promoting greater independence and self-reliance."
           button="Learn more"
           buttonLink="technology.html"
         />
@@ -48,7 +48,7 @@ function Home() {
         </div>
       </div>
       <div className={styles.technologyCardsContainer}>
-        <div className={styles.sectionTitle}>Our Technology</div>
+        <div id="technologyTitle" className={styles.sectionTitle}>Our Technology</div>
         <InfoCard cards={technologyCards} flexDirection="row" justifyContent="left" scrollable={true}/>
       </div>
     </>
