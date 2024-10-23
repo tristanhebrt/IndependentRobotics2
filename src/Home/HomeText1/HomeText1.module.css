@@ -28,23 +28,23 @@
 }
 
 .textContainer button {
-    color: var(--darkblue-text);
-    background-color:var(--white-background);
+    color: var(--white-text);
+    background-color: rgba(0, 0, 0, 0.082);
+    backdrop-filter: blur(5px);
 
     font-size: 1.5rem;
     font-weight: 700;
-    border-radius: 5px;
-    border: none;
+    border-radius: 2px;
+    border: 5px solid var(--white-background);
     text-align: center;
     align-self: flex-start;
     
     padding: 10px 20px;
     margin: 20px 0;
-    transition: transform 0.5s ease; /* Add transition for smooth scaling */
-    box-shadow: 0px 0px 10px black; 
+    transition: border-color 0.5s ease-in-out;
 }
 
 .textContainer button:hover {
-    transform: scale(1.1);
+    border-color: var(--darkblue-text);
     cursor: pointer;
 }
