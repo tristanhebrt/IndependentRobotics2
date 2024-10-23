@@ -53,6 +53,13 @@
 
     backdrop-filter: blur(2rem);
     border: 10px solid var(--white-background);
+
+    transition: border-color 1s ease-in-out;
+}
+
+.robotContainer:hover {
+    border-color: var(--darkblue-text);
+    cursor: grab;
 }
 
 /* Section title */
