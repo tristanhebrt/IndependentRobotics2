@@ -34,7 +34,7 @@ function Home() {
         title="Independence Robotics" 
         text="Empowering independence with assistive robotics"/>
       <div className={styles.infoCardContainer1}>
-        <InfoCard cards={prosCards}/>
+        <InfoCard cards={prosCards} flexDirection="row" justifyContent="center" scrollable={false}/>
       </div>
       <div className={styles.row}>
         <HomeText1 
@@ -47,9 +47,9 @@ function Home() {
           <ModelView modelUrl='./models/independenceRoboticsRobot.glb'/>
         </div>
       </div>
-      <div className={styles.infoCardContainer1}>
+      <div className={styles.technologyCardsContainer}>
         <div className={styles.sectionTitle}>Our Technology</div>
-        <InfoCard cards={technologyCards}/>
+        <InfoCard cards={technologyCards} flexDirection="row" justifyContent="left" scrollable={true}/>
       </div>
     </>
   )

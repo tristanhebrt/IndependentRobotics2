@@ -19,6 +19,20 @@
     backdrop-filter: blur(10px);
 }
 
+/* Technology Cards container */
+.technologyCardsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 2rem;
+    border-top: solid 10px var(--white-text);
+    border-bottom: solid 10px var(--white-text);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+}
+
 /* Row container */
 .row {
     display: flex;
