@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './InfoCard.module.css';
 
 function InfoCard({ cards = [], flexDirection = 'row', justifyContent = "center", scrollable = true }) {
@@ -39,7 +40,7 @@ function InfoCard({ cards = [], flexDirection = 'row', justifyContent = "center"
         if (!isDragging) return;
         e.preventDefault();
         const x = e.pageX - containerRef.current.offsetLeft;
-        const walk = (x - startX) * 1; 
+        const walk = (x - startX); // Adjust the scroll speed as needed
         containerRef.current.scrollLeft = scrollLeft - walk;
     };
 
@@ -58,10 +59,10 @@ function InfoCard({ cards = [], flexDirection = 'row', justifyContent = "center"
 
     const handleTouchMove = (e) => {
         if (!isDragging) return;
-        e.preventDefault();
+        e.preventDefault(); // Prevent default touch scrolling
         const touch = e.touches[0];
         const x = touch.pageX - containerRef.current.offsetLeft;
-        const walk = (x - startX) * 1;
+        const walk = (x - startX);
         containerRef.current.scrollLeft = scrollLeft - walk;
     };
 
@@ -88,5 +89,16 @@ function InfoCard({ cards = [], flexDirection = 'row', justifyContent = "center"
         </div>
     );
 }
+
+InfoCard.propTypes = {
+    cards: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+    })).isRequired,
+    flexDirection: PropTypes.string,
+    justifyContent: PropTypes.string,
+    scrollable: PropTypes.bool,
+};
 
 export default InfoCard;
