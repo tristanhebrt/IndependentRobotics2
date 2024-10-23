@@ -2,9 +2,7 @@ import React, { useRef, useState } from 'react';
 import styles from './InfoCard.module.css';
 
 function InfoCard({ cards = [], flexDirection = 'row', justifyContent = "center", scrollable = true }) {
-    // Create a ref for the container
     const containerRef = useRef(null);
-    
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
@@ -18,46 +16,73 @@ function InfoCard({ cards = [], flexDirection = 'row', justifyContent = "center"
         </div>
     ));
 
-    // Event handlers for dragging functionality
+    // Mouse and touch event handlers for dragging
     const handleMouseDown = (e) => {
-        if (!scrollable) return; // Only allow dragging if scrollable
+        if (!scrollable) return;
         setIsDragging(true);
         setStartX(e.pageX - containerRef.current.offsetLeft);
         setScrollLeft(containerRef.current.scrollLeft);
-        containerRef.current.style.cursor = 'grabbing'; // Change cursor on drag
+        containerRef.current.style.cursor = 'grabbing';
     };
 
     const handleMouseLeave = () => {
         setIsDragging(false);
-        if (containerRef.current) {
-            containerRef.current.style.cursor = scrollable ? 'grab' : 'default'; // Set cursor based on scrollable prop
-        }
+        resetCursor();
     };
 
     const handleMouseUp = () => {
         setIsDragging(false);
-        if (containerRef.current) {
-            containerRef.current.style.cursor = scrollable ? 'grab' : 'default'; // Set cursor based on scrollable prop
-        }
+        resetCursor();
     };
 
     const handleMouseMove = (e) => {
-        if (!isDragging) return; // Stop the function if mouse is not down
-        e.preventDefault(); // Prevent text selection
+        if (!isDragging) return;
+        e.preventDefault();
         const x = e.pageX - containerRef.current.offsetLeft;
-        const walk = (x - startX) * 1; // The amount to scroll
-        containerRef.current.scrollLeft = scrollLeft - walk; // Scroll the container
+        const walk = (x - startX) * 1; 
+        containerRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    // Touch event handlers
+    const handleTouchStart = (e) => {
+        if (!scrollable) return;
+        const touch = e.touches[0];
+        setIsDragging(true);
+        setStartX(touch.pageX - containerRef.current.offsetLeft);
+        setScrollLeft(containerRef.current.scrollLeft);
+    };
+
+    const handleTouchEnd = () => {
+        setIsDragging(false);
+    };
+
+    const handleTouchMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const touch = e.touches[0];
+        const x = touch.pageX - containerRef.current.offsetLeft;
+        const walk = (x - startX) * 1;
+        containerRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const resetCursor = () => {
+        if (containerRef.current) {
+            containerRef.current.style.cursor = scrollable ? 'grab' : 'default';
+        }
     };
 
     return (
         <div
             className={styles.infoCardContainer}
             ref={containerRef}
-            style={{ flexDirection, justifyContent, cursor: scrollable ? 'grab' : 'default' }} // Set cursor based on scrollable prop
+            style={{ flexDirection, justifyContent, cursor: scrollable ? 'grab' : 'default' }}
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            onTouchMove={handleTouchMove}
         >
             {cardContent}
         </div>
