@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 function Header(){
     const logoSrc = './src/assets/IndependenceRoboticsLogo.jpg';
     const homeLink = "#top";
-    const technologyLink = "#technologyTitle";
+    const technologyLink = "#technologySection";
     const aboutLink = "about.html";
     const contactLink = "contact.html";
     const preorderLink = "preorder.html";

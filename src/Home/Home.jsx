@@ -39,9 +39,9 @@ function Home() {
       <div className={styles.homeText1Container}>
         <HomeText />
       </div>
-      <div className={styles.technologyContainer}>
+      <div id="technologySection" className={styles.technologyContainer}>
           <div className={styles.technologyCardsContainer}>
-            <div id="technologyTitle" className={styles.sectionTitle}>Our Technology</div>
+            <div className={styles.sectionTitle}>Our Technology</div>
             <InfoCard cards={technologyCards} flexDirection="row" justifyContent="left" scrollable={true}/>
           </div>
           <div className={styles.robotContainer}>
