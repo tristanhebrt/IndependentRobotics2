@@ -5,8 +5,8 @@ import Header from '../components/Header/Header.jsx'
 import HomeTitle from '../Home/HomeTitle/HomeTitle.jsx'
 import InfoCard from '../components/InfoCard/InfoCard.jsx'
 import HomeText1 from '../Home/HomeText1/HomeText1.jsx'
-
 import ModelView from '../components/ModelView/ModelView.jsx'
+import PreOrderForm from '../components/PreOrder/PreOrderForm.jsx'
 
 function Home() {
   const prosCards = [
@@ -52,6 +52,9 @@ function Home() {
           <div className={styles.robotContainer}>
             <ModelView modelUrl='./models/independenceRoboticsRobot.glb'/>
           </div>
+      </div>
+      <div className={styles.preOrderContainer}>
+        <PreOrderForm />
       </div>
         
     </>

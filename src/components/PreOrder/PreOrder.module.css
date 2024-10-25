@@ -1,0 +1,83 @@
+/* General Reset for Margin and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
+}
+
+/* Pre order form style */
+.preOrderForm {
+    color: var(--darkblue-text);
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Adds space between the form fields */
+    max-width: 500px; /* Limit the form width */
+    min-width: 200px;
+    margin: 20px auto; /* Center the form */
+    padding: 20px;
+    
+    background-color: var(--white-background); /* Light background */
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.preOrderForm div {
+    margin-bottom: 5px;
+}
+
+.preOrderForm label {
+    font-weight: bold;
+    color: var(--darkblue-text); /* Custom color for labels */
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.preOrderForm input, .preOrderForm select {
+    font-size: 15px;
+    font-weight: 600;
+    
+    padding: 5px;
+    border: 2px solid #ccc; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    transition: border-color 0.3s ease;
+}
+
+.preOrderForm textarea {
+    font-size: 15px;
+    font-weight: 900;
+    
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 150px; /* Sets a fixed height for the textarea */
+    box-sizing: border-box;
+    resize: vertical; /* Allows vertical resizing only */
+    transition: border-color 0.3s ease;
+}
+
+/* Add a border color change on focus */
+.preOrderForm input:focus,
+.preOrderForm textarea:focus {
+    border-color: var(--lightblue-text);
+    outline: none; /* Remove default outline */
+}
+
+.preOrderForm button {
+    padding: 10px 20px;
+    background-color: var(--darkblue-text);
+    color: var(--white-text);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    width: 100%;
+}
+
+.preOrderForm button:hover {
+    background-color: var(--lightblue-text);
+}
