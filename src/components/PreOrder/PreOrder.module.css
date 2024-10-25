@@ -81,3 +81,82 @@
 .preOrderForm button:hover {
     background-color: var(--lightblue-text);
 }
+
+/* Pre order text */
+
+.textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 5vh 5vw;
+    max-width: 100%;
+}
+
+.textContainer h1 {
+    color: var(--white-text);
+
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+}
+
+.textContainer p {
+    color: var(--white-text);
+
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+
+    max-width: 80%;
+}
+
+.mainTextSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.textSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 5vh 5vw;
+    max-width: 50vw;
+
+    backdrop-filter: blur(10px);
+    border: 10px solid var(--white-text);
+    border-radius: 25px;
+    margin: 5rem;
+}
+
+.textSection h2 {
+    color: var(--white-text);
+
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+}
+
+.textSection ol {
+    padding: 2rem 0;
+    list-style: circle;
+}
+
+.textSection ol li {
+    color: var(--white-text);
+
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+
+    padding: 0.5rem 0;
+}
