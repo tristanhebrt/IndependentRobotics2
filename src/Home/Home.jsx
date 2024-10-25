@@ -4,9 +4,8 @@ import styles from './Home.module.css'
 import Header from '../components/Header/Header.jsx'
 import HomeTitle from '../Home/HomeTitle/HomeTitle.jsx'
 import InfoCard from '../components/InfoCard/InfoCard.jsx'
-import HomeText1 from '../Home/HomeText1/HomeText1.jsx'
+import HomeText from '../Home/HomeText/HomeText.jsx'
 import ModelView from '../components/ModelView/ModelView.jsx'
-import PreOrderForm from '../components/PreOrder/PreOrderForm.jsx'
 import PreOrderSection from '../components/PreOrder/PreOrderSection.jsx'
 
 function Home() {
@@ -38,12 +37,7 @@ function Home() {
         <InfoCard cards={prosCards} flexDirection="row" justifyContent="center" scrollable={false}/>
       </div>
       <div className={styles.homeText1Container}>
-        <HomeText1 
-          title="How Independence Robotics is making a difference"
-          text="We empower individuals with limited mobility by enabling them to complete simple tasks, such as retrieving objects and navigating their home. Through intuitive app controls, our assistive robot provides the freedom to take control of daily life, promoting greater independence and self-reliance."
-          button="Learn more"
-          buttonLink="technology.html"
-        />
+        <HomeText />
       </div>
       <div className={styles.technologyContainer}>
           <div className={styles.technologyCardsContainer}>
