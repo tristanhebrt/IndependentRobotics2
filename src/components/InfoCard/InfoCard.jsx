@@ -92,7 +92,7 @@ function InfoCard({ cards = [], flexDirection = 'row', justifyContent = "center"
 
 InfoCard.propTypes = {
     cards: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequired,
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired, // Accept both string and number
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
     })).isRequired,

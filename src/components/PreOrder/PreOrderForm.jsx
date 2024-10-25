@@ -1,45 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import emailjs from 'emailjs-com';
 import styles from './PreOrder.module.css';
 
+// Function to send the pre-order email using EmailJS
 async function sendPreOrder(event, setLoading, setSuccess, setError) {
     event.preventDefault(); // Prevent the default form submission
 
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
-    console.log('Submitting form with data:', data); // Log the data being submitted
+    console.log('Submitting form with data:', data);
 
-    setLoading(true); // Set loading state to true
-    setError(null);   // Reset any previous error
-    console.log('Loading state set to true'); // Debug log
+    setLoading(true);
+    setError(null);
+    console.log('Loading state set to true');
 
     try {
-        console.log('Sending POST request to /api/preorder'); // Debug log
-        const response = await fetch('http://localhost:5000/api/preorder', { // Match your server endpoint
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
+        console.log('Sending email using EmailJS');
+        const response = await emailjs.send(
+            'service_kibaglo', // Replace with your EmailJS service ID
+            'template_9zazglu', // Replace with your EmailJS template ID
+            data,               // The form data to be sent
+            'ukfCZ0yEwUnQ-vYs5' // Replace with your EmailJS user ID
+        );
 
-        console.log('Received response:', response); // Log the response object
-
-        if (!response.ok) {
-            console.error('Network response was not ok:', response.statusText); // Log network error details
-            throw new Error('Network response was not ok');
-        }
-
-        const result = await response.json();
-        console.log('Success:', result); // Log the success response
-        setSuccess('Your pre-order has been successfully submitted!'); // Set success message
+        console.log('Email sent successfully:', response);
+        setSuccess('Your pre-order has been successfully submitted!');
         event.target.reset(); // Reset the form fields
     } catch (error) {
-        console.error('Error during submission:', error); // Log the error
-        setError('There was an error submitting your pre-order. Please try again.'); // Set error message
+        console.error('Error during email submission:', error);
+        setError('There was an error submitting your pre-order. Please try again.');
     } finally {
-        setLoading(false); // Set loading state to false
-        console.log('Loading state set to false'); // Debug log
+        setLoading(false);
+        console.log('Loading state set to false');
     }
 }
 
@@ -47,6 +40,22 @@ function PreOrderForm() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(null);
     const [error, setError] = useState(null);
+    const [quantity, setQuantity] = useState(1); // State for quantity
+    const [preOrderFee, setPreOrderFee] = useState(250); // State for pre-order fee
+
+    useEffect(() => {
+        if (success) {
+            const timer = setTimeout(() => setSuccess(null), 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [success]);
+
+    // Update pre-order fee when quantity changes
+    const handleQuantityChange = (e) => {
+        const newQuantity = e.target.value;
+        setQuantity(newQuantity);
+        setPreOrderFee(newQuantity * 250); // Update fee based on quantity
+    };
 
     return (
         <div className={styles.preOrderformContainer}>
@@ -72,7 +81,16 @@ function PreOrderForm() {
                 </div>
                 <div>
                     <label htmlFor="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" max="10" required />
+                    <input
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        min="1"
+                        max="10"
+                        required
+                        value={quantity} // Controlled component
+                        onChange={handleQuantityChange} // Update state on change
+                    />
                 </div>
                 <div>
                     <label htmlFor="address">Address:</label>
@@ -84,8 +102,8 @@ function PreOrderForm() {
                 </div>
                 <div>
                     <label htmlFor="preOrderFee">Pre-Order Fee:</label>
-                    <input type="text" id="preOrderFee" name="preOrderFee" value="$250" disabled />
-                    <input type="hidden" id="preOrderFeeHidden" name="preOrderFeeHidden" value="250" />
+                    <input type="text" id="preOrderFee" name="preOrderFee" value={`$${preOrderFee}`} disabled /> {/* Display the fee */}
+                    <input type="hidden" id="preOrderFeeHidden" name="preOrderFeeHidden" value={preOrderFee} />
                 </div>
                 <div>
                     <button type="submit" disabled={loading}>{loading ? 'Submitting...' : 'Pre-Order Now'}</button>
