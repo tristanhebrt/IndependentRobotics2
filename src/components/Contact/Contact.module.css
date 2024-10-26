@@ -1,0 +1,65 @@
+/* General Reset for Margin and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
+}
+
+.contactContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    padding: 5rem 0;
+}
+
+.contactContainer h1{
+    color: var(--white-text);
+
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+    padding-bottom: 2rem;
+}
+
+.contactContainer p{
+    color: var(--white-text);
+
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+}
+
+.contactContainer img{
+    max-width: 6rem;
+    height: auto;
+
+    margin: 0.5rem 2rem;
+
+    transition: scale 0.2s ease;
+}
+
+.contactContainer img:hover{
+    scale: 1.1;
+}
+
+.textContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    padding: 0 10vw;
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+

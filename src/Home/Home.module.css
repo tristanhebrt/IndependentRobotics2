@@ -89,3 +89,14 @@
     width: 100vw;
     padding: 5rem;
 }
+
+.contactContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    border-top: solid 10px var(--white-text);
+    border-bottom: solid 10px var(--white-text);
+    backdrop-filter: blur(10px);
+}

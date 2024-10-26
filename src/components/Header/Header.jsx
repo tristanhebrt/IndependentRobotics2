@@ -5,7 +5,7 @@ function Header(){
     const homeLink = "#top";
     const technologyLink = "#technologySection";
     const aboutLink = "#aboutSection";
-    const contactLink = "contactSection";
+    const contactLink = "#contactSection";
     const preorderLink = "#preOrderSection";
     
     return(

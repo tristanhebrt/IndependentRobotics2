@@ -7,6 +7,7 @@ import InfoCard from '../components/InfoCard/InfoCard.jsx'
 import HomeText from '../Home/HomeText/HomeText.jsx'
 import ModelView from '../components/ModelView/ModelView.jsx'
 import PreOrderSection from '../components/PreOrder/PreOrderSection.jsx'
+import Contact from '../components/Contact/Contact.jsx'
 
 function Home() {
   const prosCards = [
@@ -52,12 +53,7 @@ function Home() {
         <PreOrderSection />
       </div>
       <div id="contactSection" className={styles.contactContainer}>
-        <div className={styles.contactTextContainer}>
-          <div className={styles.sectionTitle}>Contact Us</div>
-          <p>For inquiries or to schedule a demo, please contact us at:</p>
-          <p>Email: <a href="mailto:info@independencerobotics.com">info@independencerobotics.com</a></p>
-          <p>Phone: <a href="tel:+1234567890">+1 (234) 567-8901</a></p>
-        </div>
+        <Contact />
       </div>
         
     </>
