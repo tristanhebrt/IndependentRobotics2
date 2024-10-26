@@ -48,8 +48,16 @@ function Home() {
             <ModelView modelUrl='./models/independenceRoboticsRobot.glb'/>
           </div>
       </div>
-      <div className={styles.preOrderContainer}>
+      <div id="preOrderSection" className={styles.preOrderContainer}>
         <PreOrderSection />
+      </div>
+      <div id="contactSection" className={styles.contactContainer}>
+        <div className={styles.contactTextContainer}>
+          <div className={styles.sectionTitle}>Contact Us</div>
+          <p>For inquiries or to schedule a demo, please contact us at:</p>
+          <p>Email: <a href="mailto:info@independencerobotics.com">info@independencerobotics.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+1 (234) 567-8901</a></p>
+        </div>
       </div>
         
     </>

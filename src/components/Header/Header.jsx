@@ -4,9 +4,9 @@ function Header(){
     const logoSrc = './src/assets/IndependenceRoboticsLogo.jpg';
     const homeLink = "#top";
     const technologyLink = "#technologySection";
-    const aboutLink = "about.html";
-    const contactLink = "contact.html";
-    const preorderLink = "preorder.html";
+    const aboutLink = "#aboutSection";
+    const contactLink = "contactSection";
+    const preorderLink = "#preOrderSection";
     
     return(
         <header className={styles.header}>
