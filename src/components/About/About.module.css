@@ -1,0 +1,136 @@
+/* General Reset for Margin and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
+}
+
+.aboutContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    padding: 5rem 5rem;
+}
+
+.infoContainer h1{
+    color: var(--white-text);
+
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+    padding-bottom: 2rem;
+}
+
+.infoContainer p{
+    color: var(--white-text);
+
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+}
+
+.aboutContainer .demoImg{
+    max-width: 80%;
+    height: auto;
+    border: solid 10px var(--white-text);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px var(--black-shadow);
+
+    margin: 5rem 0;
+}
+
+.infoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.infoContainer h1{
+    max-width: 10vw;
+}
+
+.textContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 5rem;
+    max-width: 50vw;
+    gap: 2rem;
+}
+
+/* About Cards */
+
+.aboutCardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-direction: row;
+    max-width: 100%;
+
+    margin-top: 10vh;
+}
+
+.aboutCard{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+
+    margin: 0 2rem;
+    padding: 1rem;
+    
+    backdrop-filter: blur(2rem);
+    border: solid 10px var(--white-text);
+    border-radius: 5px;
+}
+
+.aboutCard img{
+    width: 10vw;
+    height: auto;
+    border: solid 2px var(--white-text);
+    border-radius: 5px;
+}
+
+.aboutCard h1{
+    color: var(--white-text);
+
+    text-align: center;
+    width: 10vw;
+
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+    padding-top: 1rem;
+}
+
+.aboutCard h2{
+    color: var(--white-text);
+    width: 10vw;
+
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px var(--black-shadow);
+    padding-top: 1rem;
+}
+
+.aboutCard p{
+    color: var(--darkblue-text);
+    width: 10vw;
+
+    text-align: left;
+
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    padding-top: 0.5rem;
+}

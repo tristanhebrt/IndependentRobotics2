@@ -8,8 +8,11 @@ import HomeText from '../Home/HomeText/HomeText.jsx'
 import ModelView from '../components/ModelView/ModelView.jsx'
 import PreOrderSection from '../components/PreOrder/PreOrderSection.jsx'
 import Contact from '../components/Contact/Contact.jsx'
+import About from '../components/About/About.jsx'
 
 function Home() {
+  const robotUrl = './models/independenceRoboticsRobot.glb'
+
   const prosCards = [
     { id: 1, title: "Unmatched Affordability", description: "Get the best assistive technology on the market at a price that delivers exceptional value, without compromising on quality or function." },
     { id: 2, title: "Empowering independence", description: "Regain control over daily tasks, from grabbing drinks to reaching the TV remote. Independence Robotics gives you the freedom to move and act how you choose." },
@@ -25,7 +28,6 @@ function Home() {
     { id: 6, title: "Load capacity & battery life", description: "Capable of carrying up to 10 pounds, the robotic arm is built to handle a variety of tasks. It also boasts a battery life of up to 12 hours, ensuring extended use without frequent recharging." },
     { id: 7, title: "Cost-effective solution", description: "Our mobile robotic arm is 10 times more affordable than other assistive robots on the market, making advanced assistive technology accessible to a broader audience." },
     { id: 8, title: "Reach & flexibility", description: "With a reach of 0-4 feet, the robotic arm is ideal for accessing a wide range of locations around the home." },
-
   ];
   
   return (
@@ -40,20 +42,27 @@ function Home() {
       <div className={styles.homeText1Container}>
         <HomeText />
       </div>
+
       <div id="technologySection" className={styles.technologyContainer}>
           <div className={styles.technologyCardsContainer}>
             <div className={styles.sectionTitle}>Our Technology</div>
             <InfoCard cards={technologyCards} flexDirection="row" justifyContent="left" scrollable={true}/>
           </div>
           <div className={styles.robotContainer}>
-            <ModelView modelUrl='./models/independenceRoboticsRobot.glb'/>
+            <ModelView modelUrl={robotUrl}/>
           </div>
       </div>
-      <div id="preOrderSection" className={styles.preOrderContainer}>
-        <PreOrderSection />
+
+      <div id="aboutSection" className={styles.aboutContainer}>
+        <About />
       </div>
+
       <div id="contactSection" className={styles.contactContainer}>
         <Contact />
+      </div>
+
+      <div id="preOrderSection" className={styles.preOrderContainer}>
+        <PreOrderSection />
       </div>
         
     </>
