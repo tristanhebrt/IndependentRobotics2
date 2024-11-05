@@ -7,7 +7,7 @@ function About(){
     const aboutCards = [ 
         {id: 1, 
             img:'./src/assets/about/IndependenceRoboticsRafael.jpg', 
-            name: "Rafael Hebert", 
+            name: "Rafael Hébert", 
             role: "Mechanical", 
             major: "Mechanical Eng"},
 
